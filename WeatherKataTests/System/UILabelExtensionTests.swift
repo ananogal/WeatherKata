@@ -11,8 +11,15 @@ import XCTest
 
 class UILabelExtensionTests: XCTestCase {
     
+    struct LabelStyleTests: LabelStyle {
+        let text = "Hello"
+        let fontSize: CGFloat = 20.0
+        let color = UIColor.blue
+    }
+    
     func test_shouldCreateALabelWithTextColorAndFontSize() {
-        let titleLabel = UILabel(text: "Hello", color: UIColor.blue, fontSize: 20.0)
+
+        let titleLabel = UILabel(labelStyle: LabelStyleTests())
         
         XCTAssertEqual(titleLabel.text, "Hello")
         XCTAssertEqual(titleLabel.textColor, UIColor.blue)
@@ -20,7 +27,7 @@ class UILabelExtensionTests: XCTestCase {
     }
     
     func test_shouldHavetranslatesAutoresizingMaskIntoConstraintsSetToFalse() {
-        let titleLabel = UILabel(text: "Hello", color: UIColor.blue, fontSize: 20.0)
+        let titleLabel = UILabel(labelStyle: LabelStyleTests())
         
         XCTAssertFalse(titleLabel.translatesAutoresizingMaskIntoConstraints)
     }

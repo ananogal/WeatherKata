@@ -17,6 +17,7 @@
 		93958DC91DDF08F80089E1B9 /* UILabel+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC81DDF08F80089E1B9 /* UILabel+extension.swift */; };
 		93958DCB1DDF09AA0089E1B9 /* UILabelExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DCA1DDF09AA0089E1B9 /* UILabelExtensionTests.swift */; };
 		93958DCD1DDF0ACE0089E1B9 /* UIColor+CustomColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DCC1DDF0ACE0089E1B9 /* UIColor+CustomColors.swift */; };
+		93958DD01DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DCF1DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift */; };
 		93D5F6591DDB4B5B004D4BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5F6581DDB4B5B004D4BC5 /* AppDelegate.swift */; };
 		93D5F65E1DDB4B5B004D4BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F65C1DDB4B5B004D4BC5 /* Main.storyboard */; };
 		93D5F6601DDB4B5B004D4BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F65F1DDB4B5B004D4BC5 /* Assets.xcassets */; };
@@ -47,6 +48,7 @@
 		93958DC81DDF08F80089E1B9 /* UILabel+extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UILabel+extension.swift"; path = "System/UILabel+extension.swift"; sourceTree = "<group>"; };
 		93958DCA1DDF09AA0089E1B9 /* UILabelExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UILabelExtensionTests.swift; path = System/UILabelExtensionTests.swift; sourceTree = "<group>"; };
 		93958DCC1DDF0ACE0089E1B9 /* UIColor+CustomColors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+CustomColors.swift"; path = "System/UIColor+CustomColors.swift"; sourceTree = "<group>"; };
+		93958DCF1DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherTableViewControllerTests.swift; path = Controllers/WeatherTableViewControllerTests.swift; sourceTree = "<group>"; };
 		93D5F6551DDB4B5B004D4BC5 /* WeatherKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D5F6581DDB4B5B004D4BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D5F65D1DDB4B5B004D4BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +118,14 @@
 			name = Services;
 			sourceTree = "<group>";
 		};
+		93958DCE1DDF17BD0089E1B9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				93958DCF1DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		93D5F64C1DDB4B5B004D4BC5 = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		93D5F66C1DDB4B5B004D4BC5 /* WeatherKataTests */ = {
 			isa = PBXGroup;
 			children = (
+				93958DCE1DDF17BD0089E1B9 /* Controllers */,
 				93958DBF1DDF038F0089E1B9 /* Services */,
 				93958DBA1DDEFEA20089E1B9 /* System */,
 				93D5F66F1DDB4B5B004D4BC5 /* Info.plist */,
@@ -309,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				93958DCB1DDF09AA0089E1B9 /* UILabelExtensionTests.swift in Sources */,
+				93958DD01DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift in Sources */,
 				93958DC11DDF039C0089E1B9 /* WireFrameTests.swift in Sources */,
 				93958DC71DDF05500089E1B9 /* UIViewExtensionTests.swift in Sources */,
 				93958DBC1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift in Sources */,

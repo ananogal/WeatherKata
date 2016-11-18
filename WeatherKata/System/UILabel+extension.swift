@@ -9,12 +9,12 @@
 import UIKit
 
 extension UILabel {
-    convenience init(text: String, color: UIColor, fontSize: CGFloat) {
+    convenience init(labelStyle: LabelStyle) {
         self.init()
         
-        self.text = text
-        self.font = UIFont.systemFont(ofSize: fontSize)
-        self.textColor = color
+        self.text = labelStyle.text
+        self.font = UIFont.systemFont(ofSize: labelStyle.fontSize)
+        self.textColor = labelStyle.color
         self.translatesAutoresizingMaskIntoConstraints = false
     }
 }

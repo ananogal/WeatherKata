@@ -8,18 +8,22 @@
 
 import UIKit
 
-struct HeaderViewStyle {
-    static let backgroundColor = UIColor.darkBlue
+struct ViewStyle {
+    static let headerBkgColor = UIColor.darkBlue
+    static let footerBkgColor = UIColor.white
+}
+
+struct ViewSize {
     let width: CGFloat
     let height: CGFloat
 }
 
 extension UIView {
 
-    convenience init(viewStyle: HeaderViewStyle, label: UILabel) {
-        self.init(frame: CGRect(x: 0.0, y: 0.0, width: viewStyle.width, height: viewStyle.height))
+    convenience init(viewSize: ViewSize, label: UILabel, backgroundColor: UIColor) {
+        self.init(frame: CGRect(x: 0.0, y: 0.0, width: viewSize.width, height: viewSize.height))
     
-        self.backgroundColor = HeaderViewStyle.backgroundColor
+        self.backgroundColor = backgroundColor
         self.addSubview(label)
         self.addConstraintsTo(label: label)
     }

@@ -12,6 +12,11 @@ import XCTest
 class UIViewExtensionTests: XCTestCase {
     var view: UIView!
     
+    override func setUp() {
+        super.setUp()
+        view = UIView()
+    }
+
     func test_shouldCreateAUIViewWithWidthAndHeight() {
         createHeaderView()
         
@@ -37,9 +42,36 @@ class UIViewExtensionTests: XCTestCase {
         XCTAssertEqual(view.constraints.count, 2)
     }
     
+    func test_shouldCreateAFooterViewWithTheGivenWidthAndHeight() {
+        createFooterView()
+        
+        XCTAssertEqual(view.frame.width, 20.0)
+        XCTAssertEqual(view.frame.height, 20.0)
+    }
+    
+    func test_shouldAddABackgroundColorToFooterView() {
+        createFooterView()
+        XCTAssertEqual(view.backgroundColor, UIColor.white)
+    }
+    
+    
+    func test_shouldAddALabelWithATitleToFooterView() {
+        createFooterView()
+        XCTAssertEqual(view.subviews.count, 1)
+    }
+    
+    func test_shouldCreateConstraintsWithLabelToFooterView() {
+        createFooterView()
+        XCTAssertEqual(view.constraints.count, 2)
+    }
+    
     func createHeaderView() {
-        let style = HeaderViewStyle(width: 10.0, height: 20.0)
+        let style = ViewSize(width: 10.0, height: 20.0)
         let label = UILabel()
-        view = UIView(viewStyle: style, label: label)
+        view = UIView(viewSize: style, label: label, backgroundColor: ViewStyle.headerBkgColor)
+    }
+    
+    func createFooterView() {
+        view = UIView(viewSize: ViewSize(width: 20.0, height: 20.0), label: UILabel(), backgroundColor: ViewStyle.footerBkgColor)
     }
 }
