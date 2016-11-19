@@ -22,6 +22,8 @@
 		93958DD41DE04BB50089E1B9 /* WeatherEventHandlerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DD31DE04BB50089E1B9 /* WeatherEventHandlerType.swift */; };
 		93958DD71DE04E020089E1B9 /* WeatherViewTypeSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DD61DE04E020089E1B9 /* WeatherViewTypeSpy.swift */; };
 		93958DD91DE0FD620089E1B9 /* WeatherInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DD81DE0FD620089E1B9 /* WeatherInteractor.swift */; };
+		93958DDB1DE104CB0089E1B9 /* WeatherInteractorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DDA1DE104CB0089E1B9 /* WeatherInteractorTests.swift */; };
+		93958DDD1DE1070F0089E1B9 /* EventHandlerSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DDC1DE1070F0089E1B9 /* EventHandlerSpy.swift */; };
 		93D5F6591DDB4B5B004D4BC5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93D5F6581DDB4B5B004D4BC5 /* AppDelegate.swift */; };
 		93D5F65E1DDB4B5B004D4BC5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F65C1DDB4B5B004D4BC5 /* Main.storyboard */; };
 		93D5F6601DDB4B5B004D4BC5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93D5F65F1DDB4B5B004D4BC5 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		93958DD31DE04BB50089E1B9 /* WeatherEventHandlerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherEventHandlerType.swift; path = Services/WeatherEventHandlerType.swift; sourceTree = "<group>"; };
 		93958DD61DE04E020089E1B9 /* WeatherViewTypeSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherViewTypeSpy.swift; path = Mocks/WeatherViewTypeSpy.swift; sourceTree = "<group>"; };
 		93958DD81DE0FD620089E1B9 /* WeatherInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherInteractor.swift; path = Services/WeatherInteractor.swift; sourceTree = "<group>"; };
+		93958DDA1DE104CB0089E1B9 /* WeatherInteractorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WeatherInteractorTests.swift; path = Services/WeatherInteractorTests.swift; sourceTree = "<group>"; };
+		93958DDC1DE1070F0089E1B9 /* EventHandlerSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventHandlerSpy.swift; path = Mocks/EventHandlerSpy.swift; sourceTree = "<group>"; };
 		93D5F6551DDB4B5B004D4BC5 /* WeatherKata.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeatherKata.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93D5F6581DDB4B5B004D4BC5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93D5F65D1DDB4B5B004D4BC5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				93958DC01DDF039C0089E1B9 /* WireframeTests.swift */,
+				93958DDA1DE104CB0089E1B9 /* WeatherInteractorTests.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -141,6 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				93958DD61DE04E020089E1B9 /* WeatherViewTypeSpy.swift */,
+				93958DDC1DE1070F0089E1B9 /* EventHandlerSpy.swift */,
 			);
 			name = Mocks;
 			sourceTree = "<group>";
@@ -345,6 +351,8 @@
 				93958DCB1DDF09AA0089E1B9 /* UILabelExtensionTests.swift in Sources */,
 				93958DD01DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift in Sources */,
 				93958DD71DE04E020089E1B9 /* WeatherViewTypeSpy.swift in Sources */,
+				93958DDB1DE104CB0089E1B9 /* WeatherInteractorTests.swift in Sources */,
+				93958DDD1DE1070F0089E1B9 /* EventHandlerSpy.swift in Sources */,
 				93958DC11DDF039C0089E1B9 /* WireframeTests.swift in Sources */,
 				93958DC71DDF05500089E1B9 /* UIViewExtensionTests.swift in Sources */,
 				93958DBC1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift in Sources */,

@@ -17,7 +17,6 @@ class WeatherTableViewControllerTests: XCTestCase {
         super.setUp()
         controller = UIStoryboard().createWeatherTableViewController()
         Wireframe().prepare(view: controller)
-        controller.loadViewIfNeeded()
     }
     
     override func tearDown() {
@@ -42,5 +41,14 @@ class WeatherTableViewControllerTests: XCTestCase {
 
     func test_shouldSetEventHandler() {
         XCTAssertNotNil(controller.weatherEventHandler)
+    }
+
+    func test_shouldCallLoadCitiesWeatherInEventHandler() {
+        let eventHandler = EventHandlerSpy()
+        controller.weatherEventHandler = eventHandler
+        
+        controller.loadViewIfNeeded()
+        
+        XCTAssertTrue(eventHandler.loadCitiesWeatherCalled)
     }
 }

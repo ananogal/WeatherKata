@@ -9,5 +9,5 @@
 import Foundation
 
 protocol WeatherEventHandlerType {
-    
+    func loadCitiesWeather()
 }

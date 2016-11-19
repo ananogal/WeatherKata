@@ -39,6 +39,7 @@ class WeatherTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableViewWidth = tableView.frame.width
+        weatherEventHandler?.loadCitiesWeather()
     }
 
     override func didReceiveMemoryWarning() {

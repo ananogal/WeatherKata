@@ -13,5 +13,7 @@ class WeatherInteractor {
 }
 
 extension WeatherInteractor : WeatherEventHandlerType {
-
+    func loadCitiesWeather() {
+        
+    }
 }
