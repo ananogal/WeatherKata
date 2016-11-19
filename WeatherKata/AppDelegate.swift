@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func setRootController() {
-        let controller = Wireframe().createWeatherController()
+        let controller = UIStoryboard().createWeatherTableViewController()
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.rootViewController = controller

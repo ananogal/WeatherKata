@@ -10,7 +10,7 @@
 		93958DB41DDEF8030089E1B9 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DB31DDEF8030089E1B9 /* main.swift */; };
 		93958DBC1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DBB1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift */; };
 		93958DBE1DDF03800089E1B9 /* Wireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DBD1DDF03800089E1B9 /* Wireframe.swift */; };
-		93958DC11DDF039C0089E1B9 /* WireFrameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC01DDF039C0089E1B9 /* WireFrameTests.swift */; };
+		93958DC11DDF039C0089E1B9 /* WireframeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC01DDF039C0089E1B9 /* WireframeTests.swift */; };
 		93958DC31DDF04590089E1B9 /* UIView+HeaderFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC21DDF04590089E1B9 /* UIView+HeaderFooterView.swift */; };
 		93958DC51DDF04830089E1B9 /* UIStoryboard+Controllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC41DDF04830089E1B9 /* UIStoryboard+Controllers.swift */; };
 		93958DC71DDF05500089E1B9 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93958DC61DDF05500089E1B9 /* UIViewExtensionTests.swift */; };
@@ -41,7 +41,7 @@
 		93958DB31DDEF8030089E1B9 /* main.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		93958DBB1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIStoryboardExtensionTests.swift; path = System/UIStoryboardExtensionTests.swift; sourceTree = "<group>"; };
 		93958DBD1DDF03800089E1B9 /* Wireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Wireframe.swift; path = Services/Wireframe.swift; sourceTree = "<group>"; };
-		93958DC01DDF039C0089E1B9 /* WireFrameTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WireFrameTests.swift; path = Services/WireFrameTests.swift; sourceTree = "<group>"; };
+		93958DC01DDF039C0089E1B9 /* WireframeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WireframeTests.swift; path = Services/WireframeTests.swift; sourceTree = "<group>"; };
 		93958DC21DDF04590089E1B9 /* UIView+HeaderFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIView+HeaderFooterView.swift"; path = "System/UIView+HeaderFooterView.swift"; sourceTree = "<group>"; };
 		93958DC41DDF04830089E1B9 /* UIStoryboard+Controllers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Controllers.swift"; path = "System/UIStoryboard+Controllers.swift"; sourceTree = "<group>"; };
 		93958DC61DDF05500089E1B9 /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewExtensionTests.swift; path = System/UIViewExtensionTests.swift; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		93958DBF1DDF038F0089E1B9 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				93958DC01DDF039C0089E1B9 /* WireFrameTests.swift */,
+				93958DC01DDF039C0089E1B9 /* WireframeTests.swift */,
 			);
 			name = Services;
 			sourceTree = "<group>";
@@ -321,7 +321,7 @@
 			files = (
 				93958DCB1DDF09AA0089E1B9 /* UILabelExtensionTests.swift in Sources */,
 				93958DD01DDF17E80089E1B9 /* WeatherTableViewControllerTests.swift in Sources */,
-				93958DC11DDF039C0089E1B9 /* WireFrameTests.swift in Sources */,
+				93958DC11DDF039C0089E1B9 /* WireframeTests.swift in Sources */,
 				93958DC71DDF05500089E1B9 /* UIViewExtensionTests.swift in Sources */,
 				93958DBC1DDEFEC80089E1B9 /* UIStoryboardExtensionTests.swift in Sources */,
 			);

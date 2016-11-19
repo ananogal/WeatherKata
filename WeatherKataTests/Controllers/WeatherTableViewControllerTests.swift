@@ -15,7 +15,7 @@ class WeatherTableViewControllerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        controller = Wireframe().createWeatherController()
+        controller = UIStoryboard().createWeatherTableViewController()
     }
     
     override func tearDown() {
