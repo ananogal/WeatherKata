@@ -18,4 +18,14 @@ class WireframeTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
     }
+    
+    func test_shouldPrepareViewSettingWeatherEventHandler() {
+        let wireframe = Wireframe()
+        let view = WeatherViewTypeSpy()
+        
+        wireframe.prepare(view: view)
+        
+        XCTAssertTrue(view.setEventHandlerCalled)
+    }
+
 }

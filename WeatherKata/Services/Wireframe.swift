@@ -7,7 +7,8 @@
 //
 
 class Wireframe {
- 
-
-    
+    func prepare(view: WeatherViewType) {
+        let interactor = WeatherInteractor()
+        view.setEventHandler(eventHandler: interactor as WeatherEventHandlerType)
+    }
 }

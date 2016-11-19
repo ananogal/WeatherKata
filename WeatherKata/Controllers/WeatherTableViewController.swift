@@ -32,7 +32,8 @@ struct LinkStyle: LabelStyle {
 }
 
 class WeatherTableViewController: UITableViewController {
-
+    
+    var weatherEventHandler : WeatherEventHandlerType?
     var tableViewWidth: CGFloat!
     
     override func viewDidLoad() {
@@ -92,5 +93,11 @@ extension WeatherTableViewController : UIGestureRecognizerDelegate {
         if let url = URL(string: LinkStyle.footerUrl) {
             UIApplication.shared.open(url, options: [:], completionHandler: nil)
         }
+    }
+}
+
+extension WeatherTableViewController: WeatherViewType {
+    func setEventHandler(eventHandler: WeatherEventHandlerType) {
+        self.weatherEventHandler = eventHandler
     }
 }

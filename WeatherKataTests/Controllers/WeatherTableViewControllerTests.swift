@@ -16,6 +16,8 @@ class WeatherTableViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         controller = UIStoryboard().createWeatherTableViewController()
+        Wireframe().prepare(view: controller)
+        controller.loadViewIfNeeded()
     }
     
     override func tearDown() {
@@ -33,5 +35,12 @@ class WeatherTableViewControllerTests: XCTestCase {
         
         XCTAssertEqual(label.gestureRecognizers?.count, 1)
     }
+    
+    func test_shouldConformToWeatherViewProtocol() {
+        XCTAssertNotNil(controller as WeatherViewType)
+    }
 
+    func test_shouldSetEventHandler() {
+        XCTAssertNotNil(controller.weatherEventHandler)
+    }
 }
