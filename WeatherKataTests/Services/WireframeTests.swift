@@ -22,10 +22,38 @@ class WireframeTests: XCTestCase {
     func test_shouldPrepareViewSettingWeatherEventHandler() {
         let wireframe = Wireframe()
         let view = WeatherViewTypeSpy()
+        let interactor = WeatherInteractorSpy()
         
-        wireframe.prepare(view: view)
+        wireframe.prepare(view: view, interactor: interactor)
         
         XCTAssertTrue(view.setEventHandlerCalled)
+    }
+    
+    func test_shouldPrepareViewWithInteractor() {
+        let wireframe = Wireframe()
+        let view = WeatherViewTypeSpy()
+        let interactor = WeatherInteractorSpy()
+        
+        wireframe.prepare(view: view, interactor: interactor)
+        
+        XCTAssertNotNil(view.weatherEventHandler)
+    }
+
+    func test_shouldSetPresenterOnInteractor() {
+        let controller = WeatherTableViewController()
+        let gateway = WeatherGateway()
+        let interactor = WeatherInteractor(gateway: gateway)
+        
+        Wireframe().prepare(view: controller, interactor: interactor)
+        
+        XCTAssertNotNil(interactor.presenter)
+    }
+
+    func test_shouldCreateAnInteractor() {
+        let interactor = Wireframe().createInteractor()
+        
+        XCTAssertNotNil(interactor)
+        XCTAssertNotNil(interactor.gateway)
     }
 
 }

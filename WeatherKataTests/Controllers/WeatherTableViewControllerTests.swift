@@ -12,11 +12,15 @@ import XCTest
 class WeatherTableViewControllerTests: XCTestCase {
     
     var controller: WeatherTableViewController!
+    var interactor: WeatherInteractorType!
     
     override func setUp() {
         super.setUp()
         controller = UIStoryboard().createWeatherTableViewController()
-        Wireframe().prepare(view: controller)
+        let gateway = WeatherGateway()
+        interactor = WeatherInteractor(gateway: gateway)
+        
+        Wireframe().prepare(view: controller, interactor: interactor)
     }
     
     override func tearDown() {

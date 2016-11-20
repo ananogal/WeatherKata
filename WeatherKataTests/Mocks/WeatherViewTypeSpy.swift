@@ -15,5 +15,7 @@ class WeatherViewTypeSpy : WeatherViewType {
     
     func setEventHandler(eventHandler: WeatherEventHandlerType) {
         setEventHandlerCalled = true
+        
+        weatherEventHandler = eventHandler
     }
 }

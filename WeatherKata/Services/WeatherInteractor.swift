@@ -8,12 +8,27 @@
 
 import Foundation
 
-class WeatherInteractor {
-
+class WeatherInteractor: WeatherInteractorType {
+    var presenter: WeatherPresenterType?
+    var gateway: WeatherGatewayType!
+    
+    init(gateway: WeatherGatewayType) {
+        self.gateway = gateway
+    }
+    
+    func setPresenter(_ presenter: WeatherPresenterType) {
+        self.presenter = presenter
+    }
+    
+    func loadCities() {
+        gateway.getCities { (data, error) in
+        
+        }
+    }
 }
 
 extension WeatherInteractor : WeatherEventHandlerType {
     func loadCitiesWeather() {
-        
+        loadCities()
     }
 }

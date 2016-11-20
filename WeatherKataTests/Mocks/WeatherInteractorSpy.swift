@@ -7,3 +7,20 @@
 //
 
 import Foundation
+@testable import WeatherKata
+
+class WeatherInteractorSpy : WeatherInteractorType, WeatherEventHandlerType {
+    var presenter: WeatherPresenterType?
+    
+    func setPresenter(_ presenter: WeatherPresenterType) {
+       
+    }
+    
+    func loadCities() {
+        
+    }
+    
+    func loadCitiesWeather() {
+    
+    }
+}

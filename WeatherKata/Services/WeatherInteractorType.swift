@@ -7,3 +7,14 @@
 //
 
 import Foundation
+
+enum WeatherRequest {
+    case loadCities
+}
+
+protocol WeatherInteractorType {
+    var presenter: WeatherPresenterType? {get set}
+    
+    func setPresenter(_ presenter: WeatherPresenterType)
+    func loadCities()
+}
