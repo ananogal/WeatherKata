@@ -22,7 +22,7 @@ class WeatherInteractor: WeatherInteractorType {
     
     func loadCities() {
         gateway.getCities { (data, error) in
-        
+            
         }
     }
 }

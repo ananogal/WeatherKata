@@ -15,7 +15,20 @@ class Wireframe {
     }
     
     func createInteractor() -> WeatherInteractor {
-        let gateway = WeatherGateway()
+        let gateway = createGateway()
+        
         return WeatherInteractor(gateway: gateway)
+    }
+    
+    func createGateway() -> WeatherGatewayType {
+        let store = createPersistenceStore()
+        
+        return WeatherGateway(store: store, cityParser: CityParser())
+    }
+    
+    func createPersistenceStore() -> WeatherPesistenceStoreType {
+        let resourceReader = ResourceReader()
+        
+        return WeatherPesistenceStore(resourceReader: resourceReader)
     }
 }

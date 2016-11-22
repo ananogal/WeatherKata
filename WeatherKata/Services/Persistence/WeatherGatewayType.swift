@@ -8,8 +8,10 @@
 
 import Foundation
 
-typealias DataResult = (_ data: Data?, _ error: Error?) -> Void
+typealias CitiesResult = (_ cities: [City]?, _ error: Error?) -> Void
 
 protocol WeatherGatewayType {
-    func getCities(completion: DataResult)
+    var persistenceStore: WeatherPesistenceStoreType! {get}
+    
+    func getCities(completion: CitiesResult)
 }

@@ -10,9 +10,13 @@ import XCTest
 @testable import WeatherKata
 
 class WireframeTests: XCTestCase {
-    
+    var wireframe: Wireframe!
+    var view: WeatherViewTypeSpy!
+
     override func setUp() {
         super.setUp()
+        wireframe = Wireframe()
+        view = WeatherViewTypeSpy()
     }
     
     override func tearDown() {
@@ -20,18 +24,13 @@ class WireframeTests: XCTestCase {
     }
     
     func test_shouldPrepareViewSettingWeatherEventHandler() {
-        let wireframe = Wireframe()
-        let view = WeatherViewTypeSpy()
         let interactor = WeatherInteractorSpy()
-        
         wireframe.prepare(view: view, interactor: interactor)
         
         XCTAssertTrue(view.setEventHandlerCalled)
     }
     
     func test_shouldPrepareViewWithInteractor() {
-        let wireframe = Wireframe()
-        let view = WeatherViewTypeSpy()
         let interactor = WeatherInteractorSpy()
         
         wireframe.prepare(view: view, interactor: interactor)
@@ -41,19 +40,32 @@ class WireframeTests: XCTestCase {
 
     func test_shouldSetPresenterOnInteractor() {
         let controller = WeatherTableViewController()
-        let gateway = WeatherGateway()
+        let gateway = wireframe.createGateway()
         let interactor = WeatherInteractor(gateway: gateway)
         
-        Wireframe().prepare(view: controller, interactor: interactor)
+        wireframe.prepare(view: controller, interactor: interactor)
         
         XCTAssertNotNil(interactor.presenter)
     }
 
-    func test_shouldCreateAnInteractor() {
-        let interactor = Wireframe().createInteractor()
+    func test_shouldCreateAnInteractorWithAGateway() {
+        let interactor = wireframe.createInteractor()
         
         XCTAssertNotNil(interactor)
         XCTAssertNotNil(interactor.gateway)
     }
-
+    
+    func test_shouldCreateGatewayWithAStore() {
+        let gateway = wireframe.createGateway()
+        
+        XCTAssertNotNil(gateway)
+        XCTAssertNotNil(gateway.persistenceStore)
+    }
+    
+    func test_shouldCreateAStoreWithAResourceReader() {
+        let store = wireframe.createPersistenceStore()
+        
+        XCTAssertNotNil(store)
+        XCTAssertNotNil(store.resourceReader)
+    }
 }

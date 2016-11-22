@@ -17,8 +17,7 @@ class WeatherTableViewControllerTests: XCTestCase {
     override func setUp() {
         super.setUp()
         controller = UIStoryboard().createWeatherTableViewController()
-        let gateway = WeatherGateway()
-        interactor = WeatherInteractor(gateway: gateway)
+        interactor = Wireframe().createInteractor()
         
         Wireframe().prepare(view: controller, interactor: interactor)
     }

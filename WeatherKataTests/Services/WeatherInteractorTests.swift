@@ -10,10 +10,11 @@ import XCTest
 
 class WeatherInteractorTests: XCTestCase {
     var interactor: WeatherInteractor!
+    var gateway: WeatherGatewayType!
     
     override func setUp() {
         super.setUp()
-        let gateway = WeatherGateway()
+        gateway = Wireframe().createGateway()
         interactor = WeatherInteractor(gateway: gateway)
     }
     
@@ -24,7 +25,6 @@ class WeatherInteractorTests: XCTestCase {
     func test_shouldConformToWeatherEventHandlerTypeProtocol() {
         XCTAssertNotNil(interactor as WeatherEventHandlerType)
     }
-
     
     func test_shouldCallLoadCitiesInGateway() {
         let gateway = WeatherGatewaySpy()
@@ -34,5 +34,4 @@ class WeatherInteractorTests: XCTestCase {
         
         XCTAssertTrue(gateway.getCitiesCalled)
     }
-
 }

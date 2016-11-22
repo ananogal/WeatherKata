@@ -10,9 +10,10 @@ import Foundation
 @testable import WeatherKata
 
 class WeatherGatewaySpy: WeatherGatewayType {
+    var persistenceStore: WeatherPesistenceStoreType!
     var getCitiesCalled = false
     
-    func getCities(completion: DataResult) {
+    func getCities(completion: CitiesResult) {
         getCitiesCalled = true
     }
 }
