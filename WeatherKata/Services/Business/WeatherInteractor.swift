@@ -21,8 +21,18 @@ class WeatherInteractor: WeatherInteractorType {
     }
     
     func loadCities() {
-        gateway.getCities { (data, error) in
-            
+        gateway.getCities { (cities, error) in
+            if let cities = cities {
+                iterateCities(cities)
+            }
+        }
+    }
+    
+    func iterateCities(_ cities: [City]) {
+        for city in cities {
+            gateway.getWeatherFor(city: city){ (result, error) in
+                
+            }
         }
     }
 }

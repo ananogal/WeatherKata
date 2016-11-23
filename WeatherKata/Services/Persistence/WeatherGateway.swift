@@ -30,4 +30,8 @@ class WeatherGateway: WeatherGatewayType {
             }
         }
     }
+    
+    func getWeatherFor(city: City, completion: WeatherResult) {
+    
+    }
 }

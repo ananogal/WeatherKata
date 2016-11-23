@@ -9,9 +9,11 @@
 import Foundation
 
 typealias CitiesResult = (_ cities: [City]?, _ error: Error?) -> Void
+typealias WeatherResult = (_ weather: WeatherEntity, _ error:Error?) -> Void
 
 protocol WeatherGatewayType {
     var persistenceStore: WeatherPesistenceStoreType! {get}
     
     func getCities(completion: CitiesResult)
+    func getWeatherFor(city: City, completion: WeatherResult)
 }

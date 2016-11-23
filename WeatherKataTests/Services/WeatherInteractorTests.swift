@@ -34,4 +34,29 @@ class WeatherInteractorTests: XCTestCase {
         
         XCTAssertTrue(gateway.getCitiesCalled)
     }
+    
+    func test_shouldCallGetWeatherForCityOnSuccess() {
+        let gatewaySpy = WeatherGatewaySpy()
+        gatewaySpy.cities = [FakeData.createCity()]
+        gatewaySpy.shouldSucceedGetingCities = true
+        
+        interactor = WeatherInteractor(gateway: gatewaySpy)
+        
+        interactor.loadCities()
+        
+        XCTAssertTrue(gatewaySpy.getWeatherForCityCalled)
+    }
+    
+    
+    func test_shouldIterateThroughCitiesOnSuccess() {
+        let gatewaySpy = WeatherGatewaySpy()
+        gatewaySpy.cities = [FakeData.createCity(), FakeData.createCity()]
+        gatewaySpy.shouldSucceedGetingCities = true
+        
+        interactor = WeatherInteractor(gateway: gatewaySpy)
+        
+        interactor.loadCities()
+        
+        XCTAssertEqual(gatewaySpy.countForGetWeatherForCity, 2)
+    }
 }

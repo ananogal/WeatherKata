@@ -12,14 +12,14 @@ import Foundation
 class WeatherPesistenceStoreSpy : WeatherPesistenceStoreType {
     let resourceReader: ResourceReaderType! = nil
     var getCitiesCalled = false
-    var shouldSuccedLoadingCities = false
+    var shouldSucceedLoadingCities = false
     var cityData: Data? = Data()
     var error: Error?
     
     func getCities(completion: DataResult) {
         getCitiesCalled = true
         
-        guard let data = cityData, shouldSuccedLoadingCities else {
+        guard let data = cityData, shouldSucceedLoadingCities else {
             return completion(nil, error)
         }
         

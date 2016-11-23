@@ -39,20 +39,13 @@ class WeatherGatewayTests: XCTestCase {
         gateway = WeatherGateway(store: store, cityParser: cityParser)
         
         store.cityData = FakeData.serialize(JSON: FakeData.createCityJSON() as AnyObject)
-        store.shouldSuccedLoadingCities = true
+        store.shouldSucceedLoadingCities = true
         cityParser.cities = [FakeData.createCity()]
         
-        let gatewayExpectation = expectation(description: "GatewayCallParseOnSuccess")
-        gateway.getCities{ (_, _) in
-            XCTAssertTrue(cityParser.parseCalled)
+        gateway.getCities{(results, error) in
             
-            gatewayExpectation.fulfill()
         }
-     
-        waitForExpectations(timeout: 1) { error in
-            if let error = error {
-                XCTFail("waitForExpectations GatewayCallParseOnSuccess failed: \(error)")
-            }
-        }
+        
+        XCTAssertTrue(cityParser.parseCalled)
     }
 }
