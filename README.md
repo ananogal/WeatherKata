@@ -1,22 +1,14 @@
 # Weather Kata
 
-This is the exercise used in the [blog post]( http://www.ananogal.com/blog/ios-kata/)
+Display the Weather of all capital cities of the UE.
 
+Using the DarkSky weather API, build an iOS app which shows the current weather in all capital cities of the UE. Show them in a list where you can see this data for each city:
+Temperature, humidity, chance of rain. 
 
-### The exercise
+<a href="http://www.ananogal.com/wp-content/uploads/tableCell_example.png"><img src="http://www.ananogal.com/wp-content/uploads/tableCell_example-300x122.png" alt="tablecell_example" width="300" height="122" class="aligncenter size-medium wp-image-1130" /></a>
 
-Using the [DarkSky weather API](https://developer.forecast.io/docs/v2), build an iOS app which shows the current weather in all capital cities of the UE.
-Show them in a list where you can see this data for each city:
+(I decided to add an image to the cell... it's always good to have a visual of the weather :) )
 
------------------------------------------
-Lisbon
-22oC, 54% humidity, 10% chance of rain.
------------------------------------------
-Paris
-25oC, 66% humidity, 23% chance of rain
------------------------------------------
-
-Next to each city, you should display an icon that shows the current weather ( you can use just a colored square ).
 
 
 
